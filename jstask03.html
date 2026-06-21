@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>JS TASK 02></title>
+</head>
+<body>
+   
+   
+   <button onclick="findarea()">Calculate Area </button> <br><br>
+   <button onclick="startorder()">Order Coffee </button>
+
+   <script>
+  function findarea()
+  {
+    var length=prompt("Enter Length :");
+    var width=prompt("Enter Width:");
+
+    var Area=length*width;
+    
+    alert("Area of the  Rectangle is"+Area);
+  }
+
+  function startorder()
+{
+   var name=prompt("Enter your Name");
+   var coffee=prompt("Choose your Favourrite Coffee:/n1.Espresso(Rs.500)/n2.spanish latte(Rs700)/n3.Brownie (RS.800)")
+   var qty=prompt("Enter Qunatitiy:");
+
+
+if(coffee=="1"){
+    price= 500;
+    coffeeName="Espresso";
+
+}else if(coffee=="2"){
+      price= 700;
+    coffeeName="spanish latte";
+}else if(coffee=="3"){
+      price= 800;
+      coffeeName="Brownie";
+
+}else{
+    //alert box gto display alert(invalid)
+    alert("Invalid Choice");
+
+ }
+
+    var total=price*qty;
+
+    var result=confirm("CuustomerName:"+name +
+        "/ncoffee type:" +coffeeName +
+        "/nQuantity:"+qty+
+        "/nTotal:Rs."+total+
+        "/n/nDo you want to confirm this order?"
+    );
+
+    if (result){
+    alert("order confirmed! Thank you"+name);
+    
+    }
+
+    else{ alert("order cancelled")
+
+    }
+}
+   
+
+
+   </script>
+</body>
+</html>
